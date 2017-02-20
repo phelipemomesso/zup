@@ -1,0 +1,43 @@
+<div class="jumbotron">
+	<h1 class="text-center">ZUP Front End</h1>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<form>
+			<div class="pull-left">
+				
+				<input class="form-control" placeholder="Search Shot" 
+					ng-model="filtro" ng-model-options="{ debounce: 500 }">
+			</div>
+			
+			<div class="pull-right">
+			<label for="">Tamanho: </label>
+				<select ng-change="changeSize(size)" ng-model="sizeImages" name="size" id="size">
+					<option value="normal">Normal</option>
+					<option value="teaser">Teaser</option>
+				</select>
+			</div>		
+		</form>
+	</div> <!-- fim col-md-12 -->
+</div> <!-- fim row -->
+
+<br><br>
+
+<div class="clearfix"></div>
+
+<br>
+
+<div class="row">
+
+    <meu-painel class="col-md-4 painel-animado" ng-repeat="shot in shots | filter: filtro" titulo="{{shot.title}}">
+
+        <minha-foto url="{{shot.images[shot.tipo]}}" alt="{{shot.title}}"></minha-foto>
+
+        <br>
+
+        <a href="/shot/detail/{{shot.id}}" class="btn btn-primary pull-right" type="button"> Detalhes</a>
+
+    </meu-painel>
+
+</div>

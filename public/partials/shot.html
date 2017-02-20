@@ -1,0 +1,34 @@
+<div class="jumbotron">
+	<h1 class="text-center">ZUP Front End</h1>
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-6">
+	
+	<h4>{{shot.title}}</h4>
+	<span>by {{shot.user.name}}</span>
+	<br><br>
+	<img src="{{shot.images.normal}}" alt="" class="img-responsive center-block" />
+	<br><br>
+	<p>{{shot.description}}</p>
+
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-6">
+
+	<table class="table">
+		<tr>
+			<td>Likes</td>
+			<td>{{shot.likes_count}}</td>
+		</tr>
+		<tr>
+			<td>Share</td>
+			<td>{{shot.views_count}}</td>
+		</tr>
+		<tr>
+			<td>Comments</td>
+			<td>{{shot.comments_count}}</td>
+		</tr>
+	</table>
+
+</div>
+
